@@ -7,7 +7,7 @@ import ChatHeader from "./subcomponent/ChatHeader";
 const Chat = () => {
     return (
         <div className="flex bg-[#F6F6F6]">
-            <div className="w-1/3 p-8 bg-[#00544F] h-screen flex flex-col justify-start items-start text-center">
+            <div className="w-1/4 p-8 bg-[#00544F] h-screen flex flex-col justify-start items-start text-center">
             
                 <div className="flex items-center mb-16">
                     <img src={Billie} alt="AI chatbot logo" className="w-20 mb-4"/>
@@ -33,7 +33,7 @@ const Chat = () => {
                 </div>
             
             </div>
-            <div className='flex flex-col justify-between w-2/3'>
+            <div className='flex flex-col justify-between w-3/4'>
                 <ChatHeader />
                 <ChatBox />
             </div>
