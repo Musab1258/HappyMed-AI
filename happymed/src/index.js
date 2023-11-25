@@ -10,6 +10,7 @@ import About from "./components/about/About";
 import Faqs from "./components/faqs/Faqs";
 import Blog from "./components/blog/Blog";
 import Home from "./components/home/Home";
+import Chat from './components/chat/Chat';
 
 
 const router = createBrowserRouter([
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
   {
     path: "home",
     element: <Home />
+  },
+  {
+    path: "chat",
+    element: <Chat />
   }
 ]);
 
