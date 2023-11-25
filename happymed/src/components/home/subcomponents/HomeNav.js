@@ -1,16 +1,17 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Transition } from "@headlessui/react";
-import HappyMedAI from '../../../images/nav/happymedAI.svg'
+import { Transition } from "@headlessui/react"
+import HappyMedAI from "../../../images/nav/happymedAI.svg"
 
-const Nav = () => {
+
+const HomeNav = () => {
     const [isOpen, setIsOpen] = useState(false);
     return (
-      <div className="fixed px-6 z-[9999] w-[100vw] bg-[#007D6D] shadow-lg">
+        <div className="fixed px-6 z-[9999] w-[100vw] bg-[#007D6D] shadow-lg">
         <nav className="bg-[#007D6D]">
           <div className="w-[100%] px-4 sm:px-6 lg:px-8 py-1 md:py-4">
-            <div className="w-[100%] flex items-center justify-between h-16">
-              <div className="w-[100%] flex items-center justify-between">
+            <div className=" w-[100%] flex items-center justify-between h-16">
+              <div className="flex w-[100%] items-center justify-between">
                 <div className="flex-shrink-0">
                 <Link
                       to="/"
@@ -20,10 +21,17 @@ const Nav = () => {
                         alt='HappyMedAI Logo'
                       />
                 </Link>
-                
                 </div>
+
                 <div className="hidden md:block">
                   <div  className="ml-[40rem] flex items-baseline space-x-4">
+                    <Link
+                      to="/about"
+                      className="text-[#FFFFFF] hover:text-[#8873EF] px-3 py-2 rounded-md text-[14px] font-medium"
+                    >
+                      About
+                    </Link>
+                    
                     <Link
                       to="/partners"
                       className="text-[#FFFFFF] hover:text-[#8873EF] px-3 py-2 rounded-md text-[14px] font-medium"
@@ -32,32 +40,10 @@ const Nav = () => {
                     </Link>
 
                     <Link
-                      to="/about"
-                      className="text-[#FFFFFF] hover:text-[#8873EF] px-3 py-2 rounded-md text-[14px] font-medium"
-                    >
-                      About
-                    </Link>
-
-                    <Link
                       to="/faqs"
                       className="text-[#FFFFFF] hover:text-[#8873EF] px-3 py-2 rounded-md text-[14px] font-medium"
                     >
                       FAQs
-                    </Link>
-
-                    <Link
-                      to="/blog"
-                      className="text-[#FFFFFF] hover:text-[#8873EF] px-3 py-2 rounded-md text-[14px] font-medium"
-                    >
-                      Blog/News
-                    </Link>
-
-                    <Link
-                      to="/home"
-                    >
-                      <button className="bg-[#AEDB67] px-2 py-1 text-[#FFFFFF] text-[14px] font-medium rounded-2xl w-40">
-                          Start Checkup
-                      </button>
                     </Link>
 
                   </div>
@@ -124,44 +110,24 @@ const Nav = () => {
               <div className="h-screen md:hidden text-center" id="mobile-menu">
                 <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center">
                 <Link
-                  to="/partners"
-                  className="text-[#081D20] hover:text-[#8873EF] block px-3 py-2 rounded-md text-[16px] font-medium"
-                >
-                  Partners
-                </Link>
-  
-                <Link
                     to="/about"
                     className="text-[#081D20] hover:text-[#8873EF] block px-3 py-2 mb-4 rounded-md text-[16px] font-medium"
                 >
                     About
+                </Link>
+                
+                <Link
+                  to="/partners"
+                  className="text-[#081D20] hover:text-[#8873EF] block px-3 py-2 rounded-md text-[16px] font-medium"
+                >
+                  Partners
                 </Link>
 
                 <Link
                     to="/faqs"
                     className="text-[#081D20] hover:text-[#8873EF] block px-3 py-2 mb-4 rounded-md text-[16px] font-medium"
                 >
-                    Faqs
-                </Link>
-
-                <Link
-                    to="/blog"
-                    className="text-[#081D20] hover:text-[#8873EF] px-3 py-2 mb-4 rounded-md text-[16px] font-medium"
-                >
-                    Blog
-                </Link>
-
-                <Link
-                    to="/home"
-                    className="text-[#081D20] hover:text-[#8873EF] block px-3 py-2 rounded-md text-[16px] font-medium"
-                >
-
-                    <button className="bg-[#8873EF] pl-4 pr-1 py-1 rounded-md text-[#FFFFFF] text-[14px] font-medium flex items-center">
-                        Start Checkup
-                        <span className="bg-[#9B8AF2] rounded-md ml-3 flex px-3 py-4">
-                            {/* <img src={ArrowRight} alt="arrow pointing to the right" /> */}
-                        </span>
-                    </button>
+                    FAQs
                 </Link>
 
                 </div>
@@ -172,6 +138,6 @@ const Nav = () => {
   
       </div>
     )
-};
+}
 
-export default Nav;
+export default HomeNav;

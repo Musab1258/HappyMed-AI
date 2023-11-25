@@ -6,7 +6,7 @@ import Instagram from "../../../images/footer/instagram.svg";
 
 const Footer = () => {
     return (
-        <div className="bg-[#00544F] max-w-full">
+        <div className="bg-[#00544F] max-w-full pb-10">
             <div className="flex pt-20 ml-20 text-left">
                 <div className="pb-10 w-[30%]">
                     <img 
@@ -67,7 +67,7 @@ const Footer = () => {
                 <hr />
             </div>
 
-            <div className="text-[#FFFFFF] text-center mb-6">
+            <div className="text-[#FFFFFF] text-center">
                 <p>© Copyright 2022, All Rights Reserved by ClarityUI</p>
             </div>
         </div>  
